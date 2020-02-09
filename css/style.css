@@ -1,0 +1,333 @@
+/* ここから下に記載していく */
+
+body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav ul {
+    margin-left: 40px;
+}
+
+.mainvisual {
+    height: 400px;
+    background: url(../img/mainbg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.meinvisual-title {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 200px;
+}
+
+p.m-subtitle {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.about {
+    text-align: center;
+    margin: 50px;
+}
+
+h3.about-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 30px;
+}
+
+p.a-subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+p.about-text {
+    margin-bottom: 20px;
+}
+
+.img.Box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.img.Box p {
+    width: 25%;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.course {
+    margin: 50px;
+}
+
+.course-title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.course-text {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.c-img {
+    width: 50%;
+    height: 420px;
+    background-image: url(../img/course_01.jpg);
+}
+
+.c-textbox {
+    background-color: #f7f7f7f7;
+    width: 50%;
+}
+
+.c-box {
+    display: flex;
+    justify-content: center;
+}
+
+p.c-text- {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+p.c-text {
+    width: 480px;
+    line-height: initial;
+    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.c-img2 {
+    width: 50%;
+    height: 420px;
+    background-image: url(../img/course_02.jpg);
+}
+
+.c-box2 {
+    display: flex;
+    justify-content: center;
+}
+
+.c-textbox2 {
+    background-color: #f7f7f7f7;
+    width: 50%;
+}
+
+p.c-text2- {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 480px;
+}
+
+p.c-text2 {
+    width: 480px;
+    line-height: initial;
+    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.c-img3 {
+    width: 50%;
+    height: 420px;
+    background-image: url(../img/course_03.jpg);
+}
+
+.c-box3 {
+    display: flex;
+    justify-content: center;
+}
+
+.c-textbox3 {
+    width: 50%;
+}
+
+p.c-text3- {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+p.c-text3 {
+    width: 480px;
+    line-height: inherit;
+    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h5.news-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 30px;
+    margin: 60px;
+}
+
+p.n-subtitle {
+    margin-bottom: 60px;
+}
+
+.newsbox {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h5.news-title li.newslist-item {
+    width: 300px;
+}
+
+ul.newslist {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.more {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h6.access-tite {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+p.access-subtite {
+    margin-bottom: 60px;
+}
+
+.access.box {
+    text-align: center;
+    background-color: #f7f7f7;
+    height: 875px;
+    margin: auto;
+}
+
+iframe {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+p.a-text {
+    margin-bottom: 30px;
+}
+
+.a-text-box {
+    margin-bottom: 60px;
+}
+
+h5.contact-tite {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+p.contact-sabtite {
+    margin-bottom: 60px;
+}
+
+p.contact-text {
+    margin-bottom: 30px;
+}
+
+p.contact-text- {
+    margin-bottom: 70px;
+}
+
+dd {
+    width: 300px;
+}
+
+dt {
+    width: 180px;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 32px;
+}
+
+dl {
+    display: flex;
+    justify-content: center
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    background-color: yellow;
+    color: white;
+    width: 200px;
+    height: 50px;
+}
+
+p.text-Cheeese.Academy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 140px;
+    background-color: #707070;
+    color: white;
+}
+
+span {
+    display: block;
+    text-align: left;
+    padding-bottom: 24px;
+}
