@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chat2アプリ</title>
+    <link rel="stylesheet" href="css/aa.css">
+</head>
+
+<style>
+    /* css */
+    .box1 {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: lavender;
+        height: 45px;
+        padding-top: 20px;
+    }
+
+    body {
+        background-color: ghostwhite;
+    }
+</style>
+
+<body>
+
+    <div class="box1">
+        <!-- ブラウザの画面に見える内容 -->
+        <div class="name">
+            <!-- 名前 -->
+            名前
+            <select name="name" id="username">
+                <option value="田中">田中</option>
+                <option value="高橋">高橋</option>
+                <option value="城">城</option>
+            </select>
+        </div>
+
+        <div class="text">
+            <!-- メッセージ入力欄 -->
+            <input type="" id="text" class="form-control" placeholder="メッセージをどうぞ"></textarea>
+        </div>
+
+
+    </div>
+
+    <div>
+        <!-- 保存されたデータが表示される箇所 -->
+        <div id="output"></div>
+    </div>　　　　
+    <!--/ ブラウザの画面に見える内容 -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--** 以下Firebase **-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAEbuZtZOgFNQxGduSLXILqMFuXsOUAo5w",
+            authDomain: "chat-2-49355.firebaseapp.com",
+            databaseURL: "https://chat-2-49355.firebaseio.com",
+            projectId: "chat-2-49355",
+            storageBucket: "chat-2-49355.appspot.com",
+            messagingSenderId: "795062866307",
+            appId: "1:795062866307:web:c0372b878f710b7e8326b6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //firebaseのデーターベース（保存させる場所）を使いますよと言うjsのコードを貼り付ける
+        // xxxxxスクリプトを貼り付ける
+        const newPostRef = firebase.database().ref();
+
+
+
+        $("#send").on("click", function () { // 送信ボタンを押した時この中の処理が実行される
+            newPostRef.push({ // push で firebase にデータが送信される
+                username: $("#username").val(), // 実際に push されるデータ
+                text: $("#text").val()
+            });
+
+            $("#text").val(""); // 中身を空にする
+            $("#username").val("");
+        });
+
+        // 受信処理
+        newPostRef.on("child_added", function (data) {
+            let v = data.val();
+            console.log(v);
+            let str = `<p>${v.username}<br>${v.text}</p>`;
+
+            $("#output").append(str);
+        })
+
+
+        $("#text").on("keydown", function (e) {
+            console.log(e.keyCode);
+
+            if (e.keyCode === 13) {
+                newPostRef.push({
+                    username: $("#username").val(),
+                    text: $("#text").val(),
+                })
+
+                $("#text").val("");
+                $("#username").val("");
+
+            }
+        });
+
+        function dspChatMsg(name, text) {
+            $('<div class="right_balloon"/>').text(text).appendTo($('#msgDiv'));
+            $("html,body").animate({ scrollTop: $('#bottomDiv').offset().top }, 0);
+        };
+
+
+    </script>
+</body>
